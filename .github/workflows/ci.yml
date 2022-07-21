@@ -1,14 +1,16 @@
 name: testing-actions
 on: 
   pull_request:  
-    types: [ labeled ]
+  push:
+    branches:
+      - main
+      - staging
 
 jobs:
   check-label:
-    if: contains(github.event.pull_request.labels.*.name, 'test')
     runs-on: ubuntu-latest
+
     steps:
-      - name: 'Testing labels'
-        run: |
-          echo "Hello!"
-          exit 1
+      - name: 'checkout'
+        uses: actions/checkout@v3
+
