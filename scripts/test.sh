@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-echo "Hellow"
+echo "Helloworld"
+
+# why u no working 
+
+echo "ulol"
